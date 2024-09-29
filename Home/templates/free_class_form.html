@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Free Class</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+<body>
+  <div class="form-container">
+    <h2 style="text-align: center;">Book Your Free Class</h2>
+    <form action="/submit_free_class_form" method="POST" class="form">
+      <div class="name-field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="contact-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="contact-field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="contact-field">
+        <label for="date">Preferred Class Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+      <div class="contact-field">
+        <label for="time">Preferred Class Time</label>
+        <input type="time" id="time" name="time" required />
+      </div>
+      <div class="hero-button-container">
+        <button type="submit" class="button-one">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

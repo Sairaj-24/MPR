@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSS Masterclass</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+  </head>
+  <body>
+    <section class="container">
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="logo">
+          <img src="{% static 'storage/sm-logo.png' %}" alt="" class="logoImg" />
+        </div>
+        <div class="tabs">
+          <div class="jee">
+            <p>CBSE+JEE</p>
+          </div>
+          <div class="neet">
+            <p>CBSE+NEET</p>
+          </div>
+        </div>
+      </div>
+      <!-- Hero -->
+      <div class="hero">
+        <div class="left-hero">
+          <div class="upper-tag">
+            <p>IIT-JEE | NEET 2025 Batch</p>
+          </div>
+          <div class="hero-heading">
+            <h1>MASTERCLASS</h1>
+          </div>
+          <div class="description">
+            <p>
+              Prepare the <b>BEST</b> with the <b>BEST</b> <br />by joining
+              <img src="{% static 'storage/live.png' %}" alt="" class="live" /> Masterclass.
+              <br />Classes start <span class="date">1st April</span>.
+              <br />Registrations open.
+            </p>
+          </div>
+          <div class="lower-description">
+            <p>
+              First Week Free LIVE Lectures upon Registration.
+              <br />
+              <br />
+              Download
+              <a href="#">Brochure</a>
+            </p>
+          </div>
+          <div class="hero-button-container">
+            <button type="button" class="button-one" onclick="window.location.href='{% url 'book_free_class' %}'">
+              Book Your Free Class
+            </button>
+            <button type="button" class="button-two" onclick="window.location.href='{% url 'book_one_to_one_class' %}'">
+              Book 1 to One Class
+            </button>
+          </div>
+        </div>
+        <div class="right-hero">
+          <img src="{% static 'storage/heroimage.png' %}" alt="hero" />
+        </div>
+      </div>
+      <!-- Class Card -->
+      <div class="class-card">
+        <div class="class-card-one">
+          <p class="class-board">CBSE | ISC</p>
+          <p class="class-name">12 <sup>th</sup></p>
+        </div>
+        <div class="class-card-two">
+          <p class="class-board">CBSE | ISC</p>
+          <p class="class-name">11 <sup>th</sup></p>
+        </div>
+        <div class="class-card-three">
+          <p class="class-board">CBSE | ICSC</p>
+          <p class="class-name">10 <sup>th</sup></p>
+        </div>
+      </div>
+      <!-- Money Back Guarantee -->
+      <div class="money-back-guarantee">
+        <h2><span>14 Days</span> Money Back Guarantee</h2>
+        <p>
+          If you don't enjoy the class for any reason,<br />get your fully
+          refund within 14 days, no question asked.
+        </p>
+        <div class="video-description">
+          <div class="video-thumbnail">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/IeqD7aPKpGo?si=zvmcWfvu4Y2a8toR"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="about">
+            <h3>About JSS Masterclass</h3>
+            <p>
+              JSS Classes is an initiative dedicated to SCIENCE and MATH
+              Education. We aim to educate students with the knowledge and
+              skills necessary to excel in some of the toughest competitive
+              exams in India, like IIT JEE, NEET. Our team consists of highly
+              specialised and experienced faculties, all of whom are alumni of
+              premier institutes like, IITs. Our mission is to Elevate Online
+              education and provide high quality teaching to students across the
+              country.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Topic Section -->
+      <div class="topics">
+        <div class="notes">
+          <div class="online">
+            <p>Online Resources</p>
+            <div class="line"></div>
+          </div>
+          <p class="topic-headline">Free Online Notes</p>
+          <div class="topics-list">
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Kinematics</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Digital Electronics</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Differential</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Lagranian</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Solid State Physics</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Vector Analysis</p>
+            </div>
+          </div>
+        </div>
+        <div class="tests">
+          <div class="online">
+            <p>Online Resources</p>
+            <div class="line"></div>
+          </div>
+          <p class="topic-headline">Free Online Tests</p>
+          <div class="topics-list">
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Kinematics</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Digital Electronics</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Differential</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Lagranian</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Solid State Physics</p>
+            </div>
+            <div class="topic">
+              <img src="{% static 'storage/note-icon.svg' %}" alt="note" />
+              <p class="topic-name">Vector Analysis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sample Videos -->
+      <div class="sample-videos">
+        <div class="lectures-div">
+          <div class="lectures">
+            <p>LECTURES</p>
+            <div class="line-second"></div>
+          </div>
+          <p class="sample">SAMPLE VIDEOS</p>
+          <p class="lecture-tag">Following sample videos are in English.</p>
+        </div>
+        <div class="sample-videos-thumbnails">
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/IeqD7aPKpGo?si=zvmcWfvu4Y2a8toR"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/dUkCgTOOpQ0?si=oAeS-jjgFLRBORzF"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/o2mbN452ywA?si=cYKXNY9x5Qemzauq"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/KTzGBJPuJwM?si=nlcYQsaBdznirvmr"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/lljvb8RJ6HI?si=nN3rKJMCCpjdICLU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/woKVh51KPl4?si=DoIKTGkdLAqE1-_w"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- Form -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="form">
+            <form action="" id="contact-form">
+              <div class="personal-information">
+                <p class="first-heading-form">Personal Information</p>
+                <div class="name-field">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    class="first-name"
+                    name="first-name"
+                    id="first-name"
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    class="last-name"
+                    name="last-name"
+                    id="last-name"
+                    required
+                  />
+                </div>
+                <div class="date">
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    placeholder="Date"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="contact-details">
+                <p class="second-heading-form">Contact Details</p>
+                <div class="contact-field">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    id="email"
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Whatsapp Mobile Number"
+                    id="mobile"
+                    name="mobile"
+                    required
+                    pattern="\d{10}"
+                    title="Please enter a 10-digit number."
+                    required
+                  />
+                </div>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Us -->
+      <div class="contact-us">
+        <div class="faded-line">
+          <p>FOR ANY QUERIES, CONTACT</p>
+          <div class="line-second"></div>
+        </div>
+        <div class="contact-heading">
+          <p>CONTACT US</p>
+        </div>
+        <div class="contacts">
+          <div class="call">
+            <div class="icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-box">
+              <p>Call:</p>
+              <p>+91 9643106138</p>
+            </div>
+          </div>
+          <div class="whatsapp">
+            <div class="icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="contact-box">
+              <p>Whatsapp:</p>
+              <p>+91 9643106138</p>
+            </div>
+          </div>
+          <div class="email-id">
+            <div class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-box">
+              <p>Email:</p>
+              <p>jss.workbooks@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <div class="footer-section">
+          <div class="upper-footer-section">
+            <div class="quote-section">
+              <div class="upper-bar"></div>
+              <div class="quote">
+                <h6>Quote of the Day</h6>
+                <p class="the-quote">
+                  The most incomprehensible thing about<br />
+                  the Universe is that it is comprehensible.
+                </p>
+                <p class="name">Albert Einstein</p>
+              </div>
+            </div>
+            <div class="useful-links">
+              <h6>Useful Links</h6>
+              <ul>
+                <li>
+                  <a href="/terms.html">Terms and Conditions</a>
+                </li>
+              </ul>
+            </div>
+            <div class="social-media">
+              <h6>Social Media - Join with Us</h6>
+              <div class="social-media-links">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.youtube.com/@BaoOeLearning">
+                  <i class="fa-brands fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="lower-footer-section">
+            <div class="footer-info">
+              <p>© 2024 JSS Master Class. All rights reserved.</p>
+              <p>Designed with ❤️</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9e3233a846.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

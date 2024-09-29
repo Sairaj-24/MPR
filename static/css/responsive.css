@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+/* Navbar */
+
+@media all and (max-width: 640px) {
+  html {
+    font-size: 75%;
+  }
+
+  /* Navbar */
+
+  .navbar {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 4rem;
+  }
+
+  .tabs p {
+    font-size: 1rem;
+  }
+
+  /* Hero */
+
+  .hero {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    width: 90%;
+  }
+
+  .lower-description p br:first-child {
+    display: none;
+  }
+
+  .hero-button-container {
+    margin-top: 1rem;
+  }
+
+  /* Class Card */
+
+  .class-card div {
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 1rem;
+  }
+
+  .class-board {
+    font-size: 0.8rem;
+  }
+
+  .class-name {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .class-name sup {
+    font-size: 0.8rem;
+  }
+
+  .class-card-one,
+  .class-card-two,
+  .class-card-three {
+    -moz-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
+  }
+
+  .class-card-one:hover,
+  .class-card-two:hover,
+  .class-card-three:hover {
+    -moz-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.75);
+    /* box-shadow: 10px 5px 1px 0px rgba(0, 0, 0, 0.2); */
+    box-shadow: 2px 2px 0px 0px #fff, 2px 2px 0px 1px rgba(0, 0, 0, 1);
+  }
+
+  /* Money Back Guarantee Section */
+
+  .money-back-guarantee {
+    margin: 3rem auto;
+    width: 90%;
+  }
+
+  .money-back-guarantee h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: 90%;
+    text-align: center;
+  }
+
+  .money-back-guarantee p {
+    font-size: 1rem;
+  }
+
+  .video-description {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .video-thumbnail {
+    width: 100%;
+  }
+
+  .video-thumbnail iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about {
+    max-width: 100%;
+  }
+
+  .about h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Topics */
+
+  .topics {
+    width: 90%;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .notes,
+  .tests {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .topics-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .topic img {
+    width: 100px;
+  }
+
+  .line {
+    width: 50px;
+  }
+
+  .topic-headline {
+    font-size: 1.5rem;
+  }
+
+  /* Sample Video */
+
+  .sample-videos-thumbnails {
+    grid-template-columns: 1fr;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Form */
+
+  .form {
+    padding: 0.1rem;
+  }
+
+  .name-field {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  .name-field input {
+    width: 90%;
+  }
+
+  .contact-field {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-field input {
+    width: 90%;
+  }
+
+  /* Contact Us */
+
+  .faded-line p {
+    font-size: 0.8rem;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Footer */
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .upper-footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .the-quote {
+    font-size: 1rem;
+  }
+
+  .useful-links ul {
+    font-size: 1rem;
+  }
+
+  .footer-info p:nth-child(1) {
+    font-size: 1rem;
+  }
+}
