@@ -11,6 +11,16 @@
   </head>
   <body>
     <section class="container">
+      <!-- Chat Icon -->
+<div id="chat-icon" onclick="toggleChat()">
+  <img src="https://cdn-icons-png.flaticon.com/512/134/134914.png" alt="Chat Icon">
+</div>
+
+<!-- Chatbox -->
+<div id="chatbox">
+  <div id="messages"></div>
+  <input type="text" id="userInput" placeholder="Type your question here..." onkeydown="if(event.key === 'Enter') { handleUserInput(); }">
+</div>
       <!-- Navbar -->
       <div class="navbar">
         <div class="logo">
@@ -407,5 +417,119 @@
       src="https://kit.fontawesome.com/9e3233a846.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function toggleChat() {
+        const chatbox = document.getElementById('chatbox');
+        if (chatbox.style.display === 'none') {
+            chatbox.style.display = 'flex';
+        } else {
+            chatbox.style.display = 'none';
+        }
+    }
+
+    // Sample responses for different categories
+    const botResponses = {
+    "hi": "Hello! 👋 How can I assist you with your exam preparation today?",
+    "exam schedule": "The JEE exam is scheduled for December 2024. Would you like more details?",
+    "study materials": "You can access study materials for NEET, JEE, and other exams in the study section.",
+    "pricing plans": "We offer two plans: ₹999 for Basic and ₹1499 for Premium. Both provide full access to all study materials.",
+    "login issues": "If you forgot your password, click [here](#) to reset it.",
+    "payment options": "We accept payments via credit card, debit card, and UPI. Let me know if you need help with the process.",
+    "course duration": "Our courses run for 6 months, but you can extend your access with the Premium plan.",
+    "free trial": "We offer a 7-day free trial for the Premium plan so you can explore all the features before subscribing.",
+    "live classes": "We offer live interactive classes for JEE and NEET. Check the schedule in the 'Live Classes' section.",
+    "doubt clearing": "You can ask your doubts during live sessions or post them in the 'Doubts' section for our tutors to answer.",
+    "results prediction": "We offer a performance analysis tool that predicts your exam results based on your progress and practice tests.",
+    "mock tests": "You can take mock tests in the 'Tests' section. They are designed to simulate real exam conditions.",
+    "mentorship program": "Our Premium plan includes personalized mentorship sessions with top educators.",
+    "study plan": "We can help you create a customized study plan based on your target exam and preparation level. Would you like assistance?",
+    "scholarship programs": "We offer limited scholarships for deserving students. Check the 'Scholarships' section for more details.",
+    "technical support": "If you're facing any technical issues, you can contact our support team at [support@example.com](mailto:support@example.com) or click [here](#) for troubleshooting.",
+    "exam tips": "For JEE/NEET exam tips, check out the 'Tips & Resources' section. We have guides to help you prepare effectively.",
+    "study groups": "You can join study groups with other students in the 'Community' section to collaborate and learn together.",
+    "resources download": "Study resources can be downloaded directly from the 'Download' section. Let me know if you need help finding something.",
+    "progress tracking": "You can track your progress under the 'Dashboard' section where you can see your test scores and overall performance.",
+    "application deadlines": "The last date to apply for JEE is October 2024, and for NEET, it’s November 2024. Would you like a link to the application page?",
+    "reference books": "We recommend specific reference books for JEE and NEET in the 'Books & Resources' section. Let me know if you'd like suggestions.",
+    "default": "I'm not sure about that. Can you please clarify?"
+};
+
+
+    // Function to handle user input
+    function handleUserInput() {
+        const input = document.getElementById('userInput').value.trim();
+        if (input) {
+            displayMessage(input, 'user-message');
+            respondToUser(input);
+            document.getElementById('userInput').value = ''; // Clear input field
+        }
+    }
+
+    // Function to display message
+    function displayMessage(text, messageType) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = messageType;
+        messageDiv.innerText = text;
+        document.getElementById('messages').appendChild(messageDiv);
+        document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight; // Auto scroll
+    }
+
+    // Function to respond based on the user's query
+function respondToUser(input) {
+    let response = botResponses["default"]; // Default response
+
+    // Convert input to lowercase for consistent matching
+    const userInput = input.toLowerCase();
+
+    // Match user input with predefined categories
+    if (userInput.includes("exam")) {
+        response = botResponses["exam schedule"];
+    } else if (userInput.includes("study material") || userInput.includes("study materials")) {
+        response = botResponses["study materials"];
+    } else if (userInput.includes("pricing") || userInput.includes("plans")) {
+        response = botResponses["pricing plans"];
+    } else if (userInput.includes("login") || userInput.includes("password")) {
+        response = botResponses["login issues"];
+    } else if (userInput.includes("payment") || userInput.includes("pay")) {
+        response = botResponses["payment options"];
+    } else if (userInput.includes("course duration") || userInput.includes("how long")) {
+        response = botResponses["course duration"];
+    } else if (userInput.includes("free trial")) {
+        response = botResponses["free trial"];
+    } else if (userInput.includes("live class") || userInput.includes("live session")) {
+        response = botResponses["live classes"];
+    } else if (userInput.includes("doubt") || userInput.includes("question")) {
+        response = botResponses["doubt clearing"];
+    } else if (userInput.includes("mock test") || userInput.includes("practice test")) {
+        response = botResponses["mock tests"];
+    } else if (userInput.includes("mentorship") || userInput.includes("mentor")) {
+        response = botResponses["mentorship program"];
+    } else if (userInput.includes("study plan") || userInput.includes("study guide")) {
+        response = botResponses["study plan"];
+    } else if (userInput.includes("scholarship")) {
+        response = botResponses["scholarship programs"];
+    } else if (userInput.includes("technical support") || userInput.includes("issue")) {
+        response = botResponses["technical support"];
+    } else if (userInput.includes("tips") || userInput.includes("exam tips")) {
+        response = botResponses["exam tips"];
+    } else if (userInput.includes("study group") || userInput.includes("community")) {
+        response = botResponses["study groups"];
+    } else if (userInput.includes("resources") || userInput.includes("download")) {
+        response = botResponses["resources download"];
+    } else if (userInput.includes("progress") || userInput.includes("performance")) {
+        response = botResponses["progress tracking"];
+    } else if (userInput.includes("application") || userInput.includes("deadline")) {
+        response = botResponses["application deadlines"];
+    } else if (userInput.includes("book") || userInput.includes("reference")) {
+        response = botResponses["reference books"];
+    } else if (userInput.includes("hi") || userInput.includes("hello")) {
+        response = botResponses["hi"];
+    }
+
+    // Display the bot response with a delay for more natural interaction
+    setTimeout(() => displayMessage(response, 'bot-message'), 500);
+}
+</script>
   </body>
 </html>
